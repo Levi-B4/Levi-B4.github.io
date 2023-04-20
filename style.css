@@ -1,0 +1,48 @@
+:root {
+    --colorPalletteMain: #A491D3;
+    --colorPalletteBackground: #1D1E2C;
+    --colorPaletteBlue: #14BDEB;
+    --colorPaletteGreen: #0CF574;
+    --colorPaletteRed: #D1495B;
+}
+
+body {
+    margin: 0;
+    background-color: var(--colorPalletteBackground);
+    color: white;
+    text-align: center;
+}
+
+.Navigation {
+    background-color: var(--colorPalletteMain);
+    overflow: hidden;
+}
+
+.Navigation li{
+    list-style-type: none;
+    float: left;
+    color: var(--colorPalletteBackground);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17xp;
+}
+
+.Navigation li:hover {
+    background-color: var(--colorPaletteBlue);
+    color: var(--colorPalletteBackground);
+}
+
+.Navigation li.active {
+    background-color: var(--colorPalletteBackground);
+    color: var(--colorPalletteMain);
+}
+
+.Under-Construction {
+    position: absolute;
+    bottom: 10px;
+}
+.backhoe-image {
+    width: 10%;
+    height: 10%;
+}
