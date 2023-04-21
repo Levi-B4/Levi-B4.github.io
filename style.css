@@ -1,6 +1,6 @@
 :root {
-    --colorPalletteMain: #A491D3;
-    --colorPalletteBackground: #1D1E2C;
+    --colorPaletteMain: #A491D3;
+    --colorPaletteBackground: #1D1E2C;
     --colorPaletteBlue: #14BDEB;
     --colorPaletteGreen: #0CF574;
     --colorPaletteRed: #D1495B;
@@ -8,20 +8,20 @@
 
 body {
     margin: 0;
-    background-color: var(--colorPalletteBackground);
+    background-color: var(--colorPaletteBackground);
     color: white;
     text-align: center;
 }
 
 .Navigation {
-    background-color: var(--colorPalletteMain);
+    background-color: var(--colorPaletteMain);
     overflow: hidden;
 }
 
 .Navigation li{
     list-style-type: none;
     float: left;
-    color: var(--colorPalletteBackground);
+    color: var(--colorPaletteBackground);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -30,12 +30,12 @@ body {
 
 .Navigation li:hover {
     background-color: var(--colorPaletteBlue);
-    color: var(--colorPalletteBackground);
+    color: var(--colorPaletteBackground);
 }
 
 .Navigation li.active {
-    background-color: var(--colorPalletteBackground);
-    color: var(--colorPalletteMain);
+    background-color: var(--colorPaletteBackground);
+    color: var(--colorPaletteMain);
 }
 
 .backhoe-image {
