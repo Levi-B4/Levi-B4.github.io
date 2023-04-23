@@ -44,7 +44,21 @@ a {
     color: var(--colorPaletteMain);
 }
 
-.backhoe-image {
-    width: 150px;
-    height: 150px;
+.underConstruction{
+    text-align: center;
+    color: var(--colorPaletteRed);
+}
+.GitHubIcon{
+    filter: invert(1);
+    float: left;
+    margin: 50px 50px 50px 50px;
+}
+
+.currentProjects{
+    text-align: left;
+    padding-left: 10px;
+}
+
+h3{
+    color: var(--colorPaletteGreen);
 }
