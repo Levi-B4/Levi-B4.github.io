@@ -31,7 +31,7 @@ a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17xp;
+    font-size: 16px;
 }
 
 .Navigation li:hover {
@@ -48,6 +48,7 @@ a {
     text-align: center;
     color: var(--colorPaletteRed);
 }
+
 .GitHubIcon{
     filter: invert(1);
     float: left;
@@ -61,4 +62,8 @@ a {
 
 h3{
     color: var(--colorPaletteGreen);
+}
+
+.underConstruction{
+    padding-top: 30px;
 }
