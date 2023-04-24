@@ -55,6 +55,11 @@ a {
     margin: 50px 50px 50px 50px;
 }
 
+.projectShowcase{
+    text-align: left;
+    padding-left: 10px;
+}
+
 .currentProjects{
     text-align: left;
     padding-left: 10px;
