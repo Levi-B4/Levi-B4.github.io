@@ -65,12 +65,28 @@ a {
     padding-left: 10px;
 }
 
+h1{
+    padding-top: 50px;
+}
+
+h2{
+    color: var(--colorPaletteGreen);
+}
+
 h3{
     color: var(--colorPaletteGreen);
 }
 
-.underConstruction{
-    padding-top: 30px;
+.contactMeTable{
+    width: 100%;
+}
+
+.contactMeTable td{
+    padding: 50px;
+}
+
+.contactMeIcons{
+    height: 150px;
 }
 
 #selfie {
