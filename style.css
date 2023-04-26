@@ -72,3 +72,8 @@ h3{
 .underConstruction{
     padding-top: 30px;
 }
+
+#selfie {
+    height: 30%;
+    width: 30%;
+}
