@@ -1,0 +1,204 @@
+:root {
+    /*color of background*/
+    --board-color: #c3cde8;
+
+
+    /*colors for each note color gradient*/
+    --paper-shadow-yellow: #c9bf8d;
+    --paper-dark-yellow: #e5c93d;
+    --paper-color-yellow: #ffed87;
+
+    --paper-shadow-blue: #8dc6c9;
+    --paper-dark-blue: #3de3e5;
+    --paper-color-blue: #87f7ff;
+
+    --paper-shadow-pink: #c98dbc;
+    --paper-dark-pink: #e53dc1;
+    --paper-color-pink: #ff87e7;
+
+    --paper-shadow-green: #8dc996;
+    --paper-dark-green: #3de54f;
+    --paper-color-green: #87ff9a;
+
+    /*colors for pin head*/
+    --pin-color: #d02627;
+    --pin-dark: #9e0608;
+    --pin-light: #fc7e7d;
+
+    /*gradient for metal of pin*/
+    --pin-metal-gradient: linear-gradient(to right, #808080, 40%, #eae8e8, 50%, #808080);
+
+    /*color where pin touches the note*/
+    --metal-note-contact-color: #808080;
+
+    /*gradient for pin shadow*/
+    --pin-shadow-gradient: radial-gradient(#00000025, 20%, #c9bf8d00);
+}
+
+/*Board styling*/
+body {
+    display: flex;
+    justify-content: center;
+    padding: 10vmin;
+    background-color: var(--board-color);
+    font-family: "Caveat", cursive;
+    font-size: 2rem;
+}
+
+/*note styling*/
+.paper {
+    display: flex;
+    justify-content: center;
+    min-width: 325px;
+    min-height: 175px;
+    transform: rotate(10deg);
+    transform-origin: top left;
+}
+
+/*styling to color note for each color*/
+#yellowPaper {
+    background: linear-gradient(
+        135deg,
+        /*cycle between colors*/
+        var(--paper-dark-yellow),
+        30%,
+        var(--paper-color-yellow)
+    );
+    box-shadow: 3px 3px 2px var(--paper-shadow-yellow);
+}
+#bluePaper {
+    background: linear-gradient(
+        135deg,
+        /*cycle between colors*/
+        var(--paper-dark-blue),
+        30%,
+        var(--paper-color-blue)
+    );
+    box-shadow: 3px 3px 2px var(--paper-shadow-blue);
+}
+#pinkPaper {
+    background: linear-gradient(
+        135deg,
+        /*cycle between colors*/
+        var(--paper-dark-pink),
+        30%,
+        var(--paper-color-pink)
+    );
+    box-shadow: 3px 3px 2px var(--paper-shadow-pink);
+    /*
+    grid-column: 1;
+    grid-row: 1;
+    */
+}
+#greenPaper {
+    background: linear-gradient(
+        135deg,
+        /*cycle between colors*/
+        var(--paper-dark-green),
+        30%,
+        var(--paper-color-green)
+    );
+    box-shadow: 3px 3px 2px var(--paper-shadow-green);
+}
+
+/*text styling*/
+.paper p, .paper textarea {
+    margin: auto;
+}
+.paper textarea {
+    font-family: "Caveat", cursive;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+/*pin location on note and size*/
+.pin {  
+    position: absolute;
+    left: 20px;
+    width: 60px;
+    height: 50px;
+}
+/*shadow of pin*/
+.shadow {
+    position: absolute;
+    top: 18px;
+    left: -8px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--pin-shadow-gradient);
+}
+/*pin needle creation*/
+.metal {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: var(--pin-metal-gradient);
+    border-radius: 0 0 30% 30%;
+    transform: rotate(50deg);
+    transform-origin: bottom left;
+    top: 15px;
+    border-bottom: 1px solid var(--metal-note-contact-color);
+} 
+/*pin head*/
+.bottom-circle {
+    position: absolute;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--pin-color);
+    background: radial-gradient(
+        circle at bottom right,
+        var(--pin-light),
+        25%,
+        var(--pin-dark),
+        90%,
+        var(--pin-color)
+    );
+}
+/*pin head creation animation*/
+.bottom-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 20px;
+    height: 30px;
+    transform: rotate(55deg);
+    transform-origin: 100% 100%;
+    border-radius: 0 0 40% 40%;
+    background: linear-gradient(
+        to right,
+        var(--pin-dark),
+        30%,
+        var(--pin-color),
+        90%,
+        var(--pin-light)
+    );
+}
+.bottom-circle::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at right,
+        var(--pin-light),
+        30%,
+        var(--pin-color),
+        var(--pin-dark) 80%
+    );
+}
+/*styling of sign to place on pin*/
+.sign {
+    position: absolute;
+    right: 10px;
+    top: -20px;
+}

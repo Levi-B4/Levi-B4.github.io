@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>To-Do List</title>
+      <link rel="stylesheet" href="./css/style.css">
+      <script src="./js/jscript.js"></script>
+  </head>
+
+  <body>
+    <div id="ToDos">
+      <!--Pin which user clicks to create more notes-->
+      <div class="pin" onclick="createNote()">
+        <div class="shadow"></div>
+        <div class="metal"></div>
+        <div class="bottom-circle"></div>
+        <div class="sign">+</div>
+      </div>
+
+      <!--Basic instructions for user to use website-->
+      <div class="paper" id="greenPaper">
+        <div class="pin" onclick="removeNote(this)">
+          <div class="shadow"></div>
+          <div class="metal"></div>
+          <div class="bottom-circle"></div>
+          <div class="sign">-</div>
+        </div>
+        <p>click '+' to add notes<br>'-' to delete notes</p>
+      </div>
+    </div>
+  </body>  
+</html>
